@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ANALizator</string>
+    <string name="loginText">Login</string>
+    <string name="passwordEditText">Password</string>
+    <string name="registerInfo">If you havn\'t got a account click button below.</string>
+    <string name="registerButtonText">REGISTER</string>
+    <string name="remindPasswordText">If you forgot your password, click button</string>
+    <string name="remindButton">REMIND PASSWORD</string>
+    <string name="myWalletText">My Wallet</string>
+    <string name="quotationsText">Quotations</string>
+    <string name="settingsText">Settings</string>
+    <string name="exitText">EXIT</string>
+    <string name="remindText">REMIND</string>
+    <string name="remindPassword">Remind password</string>
+    <string name="messageInfo">The message was sent to the given address.</string>
+    <string name="happyInfo">Don\'t be afraid.</string>
+    <string name="happyIcon">Happy Icon</string>
+    <string name="badPasswordText">Bad password</string>
+    <string name="add_new_account">Add New Account</string>
+    <string name="email">Email</string>
+    <string name="reset">Reset</string>
+    <string name="submit">Submit</string>
+</resources>

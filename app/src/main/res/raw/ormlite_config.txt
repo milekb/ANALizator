@@ -1,0 +1,23 @@
+#
+# generated on 2017/11/15 04:16:32
+#
+# --table-start--
+dataClass=com.example.mbienkowski.analizator.database.AccountDatabase
+tableName=accountDatabase
+# --table-fields-start--
+# --field-start--
+fieldName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=login
+# --field-end--
+# --field-start--
+fieldName=password
+# --field-end--
+# --field-start--
+fieldName=email
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
