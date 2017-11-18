@@ -82,6 +82,44 @@
                 android:layout_weight="1"
                 android:inputType="text" />
         </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/leading_question"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/questionEditText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dip"
+                android:layout_weight="1"
+                android:inputType="text" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/answer"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/answerEditText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dip"
+                android:layout_weight="1"
+                android:inputType="text" />
+        </TableRow>
     </TableLayout>
 
     <LinearLayout

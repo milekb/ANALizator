@@ -24,12 +24,20 @@ public class AccountDatabase {
     @DatabaseField
     private String email;
 
+    @DatabaseField
+    private String question;
+
+    @DatabaseField
+    private String answer;
+
     public AccountDatabase(){}
 
-    public AccountDatabase(String login, String password, String email){
+    public AccountDatabase(String login, String password, String email, String question, String answer){
         this.login = login;
         this.password = password;
         this.email = email;
+        this.question = question;
+        this.answer = answer;
     }
 
     public String getLogin() {
@@ -62,6 +70,22 @@ public class AccountDatabase {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public String getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
     }
 }
 

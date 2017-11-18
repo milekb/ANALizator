@@ -11,6 +11,10 @@
     </activity>
         <activity android:name=".laczenie.MainPageActivity"></activity>
         <activity android:name=".laczenie.AddAccountActivity"></activity>
+        <activity android:name=".laczenie.RemindPasswordActivity"></activity>
+        <activity android:name=".laczenie.RemindPasswordQuestionActivity"></activity>
+        <activity android:name=".laczenie.RemindPasswordMessageActivity"></activity>
+
 </application>
 
 </manifest>

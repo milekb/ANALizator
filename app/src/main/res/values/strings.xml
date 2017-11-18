@@ -20,4 +20,9 @@
     <string name="email">Email</string>
     <string name="reset">Reset</string>
     <string name="submit">Submit</string>
+    <string name="leading_question">Leading question</string>
+    <string name="answer">Answer</string>
+    <string name="insert_your_e_mail">Insert your E-Mail</string>
+    <string name="next">next</string>
+    <string name="Insert_your_answer">Insert your answer</string>
 </resources>

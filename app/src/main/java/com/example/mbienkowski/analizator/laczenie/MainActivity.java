@@ -110,16 +110,21 @@ public class MainActivity extends Activity implements View.OnClickListener{
             Intent myIntent = new Intent(v.getContext(), AddAccountActivity.class);
             startActivityForResult(myIntent, 0);
         }
+
+        else if(v == remindButton){
+            Intent myIntent = new Intent(v.getContext(), RemindPasswordActivity.class);
+            startActivityForResult(myIntent,0);
+        }
     }
     private void AccountDatabaseActivity() throws SQLException {
         AccountDatabaseOpenHelper accountDatabaseOpenHelper = OpenHelperManager.getHelper(this, AccountDatabaseOpenHelper.class);
 
         Dao<AccountDatabase, Long> accountDatabaseDao = accountDatabaseOpenHelper.getDao();
 
-        accountDatabaseDao.create(new AccountDatabase("mbienkowski", "milosz", "milosz_bienkowski@vp.pl"));
-        accountDatabaseDao.create(new AccountDatabase("jkowalski", "jan", "jan_kowalski@vp.pl"));
-        accountDatabaseDao.create(new AccountDatabase("tnowak", "tadeusz", "tadeusz_kowalski@vp.pl"));
-        accountDatabaseDao.create(new AccountDatabase("akowalczyk", "andrzej", "andrzej_kowalczyk@vp.pl"));
+        accountDatabaseDao.create(new AccountDatabase("mbienkowski", "milosz", "milosz_bienkowski@vp.pl","Imię mamy?", "Gabrysia"));
+        accountDatabaseDao.create(new AccountDatabase("jkowalski", "jan", "jan_kowalski@vp.pl","Imię ojca?","Bogdan"));
+        accountDatabaseDao.create(new AccountDatabase("tnowak", "tadeusz", "tadeusz_kowalski@vp.pl","Nazwa pupila?", "Kiciuś"));
+        accountDatabaseDao.create(new AccountDatabase("akowalczyk", "andrzej", "andrzej_kowalczyk@vp.pl", "Ostatnia dziewczyna?", "Kaja"));
 
         List<AccountDatabase> accountDatabases = accountDatabaseDao.queryForAll();
     }

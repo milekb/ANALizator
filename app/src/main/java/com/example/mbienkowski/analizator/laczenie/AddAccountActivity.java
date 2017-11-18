@@ -25,7 +25,7 @@ import java.sql.SQLException;
 
 public class AddAccountActivity extends Activity implements OnClickListener{
     private AccountDatabaseOpenHelper accountDatabaseOpenHelper = null;
-    private EditText loginEditText, passwordEditText, emailEditText;
+    private EditText loginEditText, passwordEditText, emailEditText, questionEditText, answerEditText;
     private Button resetButton, submitButton;
 
     @Override
@@ -36,6 +36,9 @@ public class AddAccountActivity extends Activity implements OnClickListener{
         loginEditText = (EditText) findViewById(R.id.loginEditText);
         passwordEditText = (EditText) findViewById(R.id.passwordEditText);
         emailEditText = (EditText) findViewById(R.id.emailEditText);
+        questionEditText = (EditText) findViewById(R.id.questionEditText);
+        answerEditText = (EditText) findViewById(R.id.answerEditText);
+
 
         resetButton = (Button) findViewById(R.id.resetButton);
         submitButton = (Button) findViewById(R.id.submitButton);
@@ -66,13 +69,17 @@ public class AddAccountActivity extends Activity implements OnClickListener{
         if(v == submitButton){
             if(loginEditText.getText().toString().trim().length() > 0 &&
                     passwordEditText.getText().toString().trim().length() > 0 &&
-                    emailEditText.getText().toString().trim().length() > 0){
+                    emailEditText.getText().toString().trim().length() > 0 &&
+                    questionEditText.getText().toString().trim().length() > 0 &&
+                    answerEditText.getText().toString().trim().length() > 0 ){
 
                 final AccountDatabase accountBase = new AccountDatabase();
 
                 accountBase.setLogin(loginEditText.getText().toString());
                 accountBase.setPassword(passwordEditText.getText().toString());
                 accountBase.setEmail(emailEditText.getText().toString());
+                accountBase.setQuestion(questionEditText.getText().toString());
+                accountBase.setAnswer(answerEditText.getText().toString());
 
                 try{
                    final Dao<AccountDatabase, Long> accountDatabaseDao = getHelper().getDao();
@@ -105,6 +112,8 @@ public class AddAccountActivity extends Activity implements OnClickListener{
         loginEditText.setText("");
         passwordEditText.setText("");
         emailEditText.setText("");
+        questionEditText.setText("");
+        answerEditText.setText("");
     }
 
 
